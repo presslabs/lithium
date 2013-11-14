@@ -4,8 +4,8 @@ from nose.tools import eq_
 
 from utils.tests.fixtures import fixtures
 
-from todoapi.users.models import User
-from todoapi.users.tests.base_tests import TestWithUser
+from plutonium.users.models import User
+from plutonium.users.tests.base_tests import TestWithUser
 
 load_fixture = fixtures('users', 'user.update')
 

@@ -3,7 +3,7 @@ from unipath import Path
 
 def fixtures(module, yaml_file):
 
-  yaml_file = Path.cwd().child('todoapi', module, 'tests', 'fixtures', '%s.yml' % yaml_file)
+  yaml_file = Path.cwd().child('plutonium', module, 'tests', 'fixtures', '%s.yml' % yaml_file)
 
   with open(yaml_file) as yaml_file:
     fixtures = yaml.load(yaml_file.read())

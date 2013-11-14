@@ -1,6 +1,6 @@
 from utils.views import ModelView
 
-from todoapi.users.models import User
+from plutonium.users.models import User
 
 class UsersView(ModelView):
   model = User

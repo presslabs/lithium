@@ -7,7 +7,7 @@ from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from utils.validate import Validate
 from utils.validators import Unique, Lenght, Email
 
-from todoapi.extensions import db
+from plutonium.extensions import db
 
 class User(db.Model):
 

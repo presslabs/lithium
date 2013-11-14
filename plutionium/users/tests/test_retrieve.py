@@ -2,8 +2,8 @@ import json
 
 from nose.tools import eq_
 
-from todoapi.users.tests.base_tests import TestWithUser
-from todoapi.users.models import User
+from plutonium.users.tests.base_tests import TestWithUser
+from plutonium.users.models import User
 
 from utils.tests import fixtures
 

@@ -2,7 +2,7 @@ import json
 
 from nose.tools import eq_
 
-from todoapi.users.models import User
+from plutonium.users.models import User
 
 from utils.tests.base import BaseTest
 from utils.tests import fixtures

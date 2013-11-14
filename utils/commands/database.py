@@ -3,8 +3,8 @@ import nose
 from colorama import Fore, Back, Style
 from flask.ext.script import Command, Option, Manager, prompt_bool
 
-from todoapi.app import create_app
-from todoapi.extensions import db
+from plutonium.app import create_app
+from plutonium.extensions import db
 
 manager = Manager(usage="Perform database operations")
 

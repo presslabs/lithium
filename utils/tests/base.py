@@ -1,7 +1,7 @@
 from flask.ext.testing import TestCase
 
-from todoapi import create_app
-from todoapi.extensions import db
+from plutonium import create_app
+from plutonium.extensions import db
 
 class BaseTest(TestCase):
 

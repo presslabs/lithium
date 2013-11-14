@@ -2,7 +2,7 @@ import json
 
 from flask import Blueprint, request
 
-from todoapi.extensions import db
+from plutonium.extensions import db
 
 from utils.decoder import AlchemyDecoder
 from utils.views.base import BaseView

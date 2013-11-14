@@ -11,6 +11,6 @@ class TestCommand(Command):
 
   def run(self, notify):
     basic_nose_argv = ["tests=tests", "--with-coverage",
-                       "--cover-package=todoapi"]
+                       "--cover-package=plutonium"]
 
     nose.main(argv=basic_nose_argv)

@@ -4,8 +4,8 @@ from importlib import import_module
 from flask import Flask
 from flask.ext.admin.contrib.sqla import ModelView as AdminModelView
 
-from todoapi.extensions import db, admin, oauth, migrate
-from todoapi.auth import api
+from plutonium.extensions import db, admin, oauth, migrate
+from plutonium.auth import api
 
 from utils.views import ModelView
 
