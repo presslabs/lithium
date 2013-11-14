@@ -1,0 +1,35 @@
+create_user_valid_data:
+  password  : myawesomepass
+  username  : vtemian
+  first_name: Vlad
+  last_name : Temian
+  email     : vladtemian@gmail.com
+
+response_valid_data:
+  username      : vtemian
+  id            : 1
+  first_name    : Vlad
+  last_name     : Temian
+  email         : vladtemian@gmail.com
+  last_modified : Null
+
+create_user_missing_data:
+  username   : vtemian
+  first_name : Vlad
+  last_name  : Temian
+  email      : vladtemian@gmail.com
+
+create_user_invalid_email:
+  username   : vtemian
+  password   : my_awesome_pass
+  first_name : Vlad
+  last_name  : Temian
+  email      : vladtemiangmail.com
+
+response_invalid_email:
+  email:
+    - "Invalid email"
+
+response_missing_data:
+  password:
+    - "password field not found in request"

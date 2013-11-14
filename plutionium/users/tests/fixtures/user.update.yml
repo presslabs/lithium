@@ -1,0 +1,32 @@
+update_user_valid_data:
+  password  : my_second_pass
+  email     : vtemian@gmail.com
+
+response_valid_data:
+  username      : vtemian
+  id            : 1
+  first_name    : Vlad
+  last_name     : Temian
+  email         : vtemian@gmail.com
+  last_modified : Null
+
+update_user_missing_data:
+  username   : vtemian
+  password  : myawesomepass
+  first_name : Vlad
+  last_name  : Temian
+  email      : vladtemian@gmail.com
+
+update_user_invalid_email:
+  username   : vtemian
+  password   : my_awesome_pass
+  first_name : Vlad
+  last_name  : Temian
+  email      : vladtemiangmail.com
+
+response_invalid_email:
+  email:
+    - 'Invalid email'
+
+non_existing_user:
+  error: "Item not found in database"

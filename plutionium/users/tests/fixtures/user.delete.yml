@@ -1,0 +1,5 @@
+success:
+  success: "Item was deleted!"
+
+missing:
+  error: "Item not found in database"
