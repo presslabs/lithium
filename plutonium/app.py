@@ -5,7 +5,6 @@ from flask import Flask
 from flask.ext.admin.contrib.sqla import ModelView as AdminModelView
 
 from plutonium.extensions import db, admin, oauth, migrate
-from plutonium.auth import api
 
 from utils.views import ModelView
 

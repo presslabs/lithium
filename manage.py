@@ -1,4 +1,4 @@
-from flask.ext.script import Manager
+from flask.ext.script import Manager, Server
 from flask.ext.migrate import Migrate, MigrateCommand
 
 from plutonium import create_app
