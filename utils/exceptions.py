@@ -51,8 +51,20 @@ class BaseHttpException(HTTPException):
     """Get a list of headers."""
     return [self._template[self.request_type]['headers']]
 
+class HttpBadRequest(BaseHttpException):
+  code = 400
+
+class HttpUnauthorized(BaseHttpException):
+  code = 401
+
+class HttpPaymentRequired(BaseHttpException):
+  code = 402
+
+class HttpForbidden(BaseHttpException):
+  code = 403
+
 class HttpNotFound(BaseHttpException):
   code = 404
 
-class HttpBadRequest(BaseHttpException):
-  code = 400
+class HttpMethodNotAllowed(BaseHttpException):
+  code = 405
