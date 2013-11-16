@@ -1,7 +1,8 @@
 from functools import wraps
 
-def require(*permissions):
+from flask import request
 
+def require(permissions):
   def decorator(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
