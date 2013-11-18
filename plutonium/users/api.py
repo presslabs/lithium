@@ -12,6 +12,6 @@ class UsersView(ModelView):
 
   @route('/filter/', methods=['GET'])
   @signature
-  @require(['get_user_by_username'])
+  @require('users', ['get_user_by_username'])
   def filter(self):
     return "yeye"
