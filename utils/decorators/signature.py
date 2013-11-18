@@ -31,7 +31,7 @@ def sign(message, key):
 
 def get_key(client_id):
   for client_name, client in current_app.config['CLIENTS'].iteritems():
-    if client['client_id'] == client_id:
+    if 'client_id' in client and client['client_id'] == client_id:
       return client['client_key']
 
   raise HttpForbidden("Invalid client id")
