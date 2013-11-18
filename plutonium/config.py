@@ -18,5 +18,8 @@ CLIENTS = {
     'client_key': 'ekuc+xvVRMClIbjLmEFLJ',
     'client_id' : '7a4b9cfb-1bd5-44c0-a521-b8cb98414b27',
     'host'      : 'plutonium.presslabs.com'
+  },
+  'apq': {
+    'host'      : 'apq.presslabs.com',
   }
 }
