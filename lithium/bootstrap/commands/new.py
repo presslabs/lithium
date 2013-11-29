@@ -13,9 +13,9 @@ help = "Bootstrap a service with all you need"
 def new(name):
   makedirs(name)
 
-  with open('commands/layouts/default.yml') as f:
+  with open('layouts/default.yml') as f:
     layout = yaml.load(Template(f.read()).render(app_name=name))
-    create_service(layout, 'commands/templates', name, name)
+    create_service(layout, 'templates', name, name)
 
   return name
 
