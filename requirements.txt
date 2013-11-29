@@ -1,3 +1,8 @@
+Jinja2==2.7.1
+MarkupSafe==0.18
+PyYAML==3.10
+argcomplete==0.6.3
 argh==0.23.3
 argparse==1.2.1
+colorama==0.2.7
 wsgiref==0.1.2
