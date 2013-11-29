@@ -21,7 +21,6 @@ def new(name):
 
 def create_service(layout, templates_dir, current_dir, app_name):
   for item in layout:
-    print item
     if isinstance(item, dict):
       path = "%s/%s" % (current_dir, item.keys()[0])
       makedirs(path)
