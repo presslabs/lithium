@@ -1,4 +1,11 @@
 - {{app_name}}:
-  - manage.py
-  - manage.py
-- "manage.py"
+  - __init__.py
+  - app.py
+  - local_config.py
+  - config.py
+  - extensions.py
+- manage.py
+- requirements.txt
+- .gitignore
+- README.md
+- LICENSE
