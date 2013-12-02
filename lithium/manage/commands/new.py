@@ -1,6 +1,6 @@
 from random import randint
 from os import listdir, chdir, makedirs
-from os.path import isdir, join
+from os.path import isdir, join, dirname, abspath
 
 from argh.decorators import arg
 from jinja2 import Template
@@ -12,14 +12,17 @@ from elements import all
 help = "Bootstrap a service with all you need"
 @arg('name', default=all[randint(0, len(all))], help=help)
 def new(name):
+  working_dir = dirname(abspath(__file__)) + '/..'
+  print working_dir
+
   print Fore.BLUE + "\nCreating service folder..."
   makedirs(name)
   print Fore.CYAN + "Done!\n"
 
-  with open('layouts/default.yml') as f:
+  with open('%s/layouts/default.yml' % working_dir) as f:
     layout = yaml.load(Template(f.read()).render(app_name=name))
     print Fore.RED + "Creating layout..."
-    create_service(1, layout, 'templates', name, name)
+    create_service(1, layout, '%s/templates' % working_dir, name, name)
 
   print Fore.BLUE + "\nYou're service layout is ready" + Fore.RESET
   return ""

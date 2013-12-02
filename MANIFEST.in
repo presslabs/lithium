@@ -1,0 +1,2 @@
+include lithium/manage/layouts/*
+include lithium/manage/templates/*
