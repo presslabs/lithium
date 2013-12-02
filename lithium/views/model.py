@@ -20,8 +20,8 @@ class ModelView(BaseView):
     if not item.valid:
       raise HttpBadRequest(item.errors)
 
-    db.session.add(item)
-    db.session.commit()
+    self.db.session.add(item)
+    self.db.session.commit()
 
     return AlchemyDecoder(item, self.__exclude__)
 
@@ -53,8 +53,8 @@ class ModelView(BaseView):
     if not item.valid:
       raise HttpBadRequest(item.errors)
 
-    db.session.add(item)
-    db.session.commit()
+    self.db.session.add(item)
+    self.db.session.commit()
 
     return AlchemyDecoder(item, self.__exclude__)
 
@@ -62,7 +62,7 @@ class ModelView(BaseView):
     item = self.model.query.get(entity_id)
 
     if item:
-      db.session.delete(item)
+      self.db.session.delete(item)
       return {'success': 'Item was deleted!'}
     else:
       raise HttpNotFound({'error': 'Item not found in database'})
