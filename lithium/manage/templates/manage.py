@@ -2,6 +2,7 @@ from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
 
 from {{ app_name }} import create_app
+from {{ app_name }}.extensions import db
 from lithium.commands import TestCommand, database
 
 if __name__ == "__main__":
@@ -9,7 +10,7 @@ if __name__ == "__main__":
 
   manager.add_option('-c', '--config', dest='config', required=False)
   manager.add_command('test', TestCommand())
-  manager.add_command('database', database)
+  manager.add_command('database', database(db))
   manager.add_command('migration', MigrateCommand)
 
   manager.run()

@@ -1,4 +1,4 @@
-from utils.declarative import BaseSQLAlchemy as SQLAlchemy
+from lithium.declarative import BaseSQLAlchemy as SQLAlchemy
 db = SQLAlchemy()
 
 from flask.ext.cache import Cache
