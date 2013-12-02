@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 requires = ['pyyaml>=3.1', 'colorama>=0.2.5', 'Jinja2>=2.7.1', 'MarkupSafe>=0.18',
-            'argcomplete>=0.6.3', 'argparse>=1.2.1', 'wsgiref>=0.1.2']
+            'argcomplete>=0.6.3', 'argparse>=1.2.1', 'wsgiref>=0.1.2', 'argh==0.23.3']
 
 setup(name="lithum",
-      version="0.1.3",
+      version="0.1.4",
       platforms='any',
       packages = find_packages(),
       include_package_data=True,
