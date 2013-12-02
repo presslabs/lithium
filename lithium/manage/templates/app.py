@@ -14,7 +14,7 @@ def create_app(config=None):
 
   app = Flask(__name__)
 
-  default_config = os.path.join(app.root_path, 'config.py')
+  default_config = os.path.join(app.root_path, 'local_config.py')
   app.config.from_pyfile(default_config)
 
   if config:

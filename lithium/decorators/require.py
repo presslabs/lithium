@@ -4,8 +4,8 @@ from functools import wraps
 
 from flask import request, current_app
 
-from utils.decorators.signature import sign
-from utils.exceptions import HttpUnauthorized
+from lithium.decorators.signature import sign
+from lithium.exceptions import HttpUnauthorized
 
 def require(resource_namespace, permissions, resource_id=None):
   def decorator(f):

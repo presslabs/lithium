@@ -1,4 +1,4 @@
-from utils.validators.exceptions import ValidationException
+from lithium.validators.exceptions import ValidationException
 
 class Validate(object):
 

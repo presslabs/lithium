@@ -1,5 +1,5 @@
-from utils.validators.validator import Validator
-from utils.validators.exceptions import ValidationException
+from lithium.validators.validator import Validator
+from lithium.validators.exceptions import ValidationException
 
 class Email(Validator):
 

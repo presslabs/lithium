@@ -2,16 +2,15 @@ import json
 
 from flask import Blueprint, request
 
-from plutonium.extensions import db
-
-from utils.decoder import AlchemyDecoder
-from utils.views.base import BaseView
-from utils.exceptions import HttpNotFound, HttpBadRequest
+from lithium.decoder import AlchemyDecoder
+from lithium.views.base import BaseView
+from lithium.exceptions import HttpNotFound, HttpBadRequest
 
 class ModelView(BaseView):
 
   model = None
   __exclude__ = []
+  db = None
 
   def post(self):
     data = json.loads(request.data)

@@ -1,7 +1,7 @@
 from werkzeug.exceptions import HTTPException
 from werkzeug.utils import escape
 
-from utils.views.base import serialize_response, get_request_type
+from lithium.views.base import serialize_response, get_request_type
 
 class BaseHttpException(HTTPException):
 

@@ -5,7 +5,7 @@ from functools import wraps
 
 from flask import request, current_app
 
-from utils.exceptions import HttpUnauthorized, HttpForbidden
+from lithium.exceptions import HttpUnauthorized, HttpForbidden
 
 def signature(f):
   @wraps(f)
