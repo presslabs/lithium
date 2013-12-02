@@ -4,10 +4,9 @@ from importlib import import_module
 from flask import Flask
 from flask.ext.admin.contrib.sqla import ModelView as AdminModelView
 
-from {{app_name}}.extensions import db, admin, oauth, migrate
-from {{app_name}}.auth import api
+from {{app_name}}.extensions import db, admin, migrate
 
-from utils.views import ModelView
+from lithium.views import ModelView
 
 cache = []
 
@@ -21,7 +20,7 @@ def create_app(config=None):
   if config:
     app.config.from_pyfile(config)
 
-  blueprints = ['users', 'tasks']
+  blueprints = []
 
   db.init_app(app)
 
