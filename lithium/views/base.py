@@ -23,10 +23,13 @@ def serialize_response(request_type, response):
     'xml': lambda response: json.dumps(response),
   }
 
+  if isinstance(response, basestring) or isinstance(response, Response):
+    return response
+
   if request_type in serializers:
     return serializers[request_type](response)
 
-  return json.dumps(response) if not isinstance(response, str) else response
+  return json.dumps(response)
 
 def serialize(f):
   @wraps(f)
