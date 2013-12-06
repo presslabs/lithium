@@ -1,7 +1,7 @@
 from lithium.validators.validator import Validator
 from lithium.validators.exceptions import ValidationException
 
-class Lenght(Validator):
+class Length(Validator):
 
   def __init__(self, min, max):
     self.min = min
