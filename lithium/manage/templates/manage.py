@@ -10,7 +10,7 @@ if __name__ == "__main__":
   manager = Manager(create_app)
 
   manager.add_option('-c', '--config', dest='config', required=False)
-  manager.add_command('test', TestCommand())
+  manager.add_command('test', TestCommand(package="{{ app_name }}"))
   manager.add_command('database', database(db))
   manager.add_command('migration', MigrateCommand)
 
