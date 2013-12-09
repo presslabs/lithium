@@ -1,2 +1,2 @@
 from .base import BaseTest
-from .fixtures import fixtures
+from .fixtures import fixtures_wrapper

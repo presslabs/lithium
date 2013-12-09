@@ -1,17 +1,20 @@
 import yaml
 from unipath import Path
 
-def fixtures(module, yaml_file):
+def fixtures_wrapper(app_name):
 
-  yaml_file = Path.cwd().child('plutonium', module, 'tests', 'fixtures', '%s.yml' % yaml_file)
+  def fixtures(module, yaml_file):
 
-  with open(yaml_file) as yaml_file:
-    fixtures = yaml.load(yaml_file.read())
+    yaml_file = Path.cwd().child(app_name, module, 'tests', 'fixtures', '%s.yml' % yaml_file)
 
-  def load_fixture(fixture_name):
-    if fixture_name in fixtures:
-      return fixtures[fixture_name]
-    else:
-      raise LookupError('%s doesnt exists in this fixture file' % fixture_name)
+    with open(yaml_file) as yaml_file:
+      fixtures = yaml.load(yaml_file.read())
 
-  return load_fixture
+    def load_fixture(fixture_name):
+      if fixture_name in fixtures:
+        return fixtures[fixture_name]
+      else:
+        raise LookupError('%s doesnt exists in this fixture file' % fixture_name)
+
+    return load_fixture
+  return fixtures
