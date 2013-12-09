@@ -1,7 +1,7 @@
 from functools import wraps
 import json
 
-from flask import request
+from flask import request, Response
 
 from flask.ext.classy import FlaskView
 
