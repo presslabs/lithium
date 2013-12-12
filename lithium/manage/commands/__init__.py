@@ -1,2 +1,2 @@
-from .new import new
-from .clients import client
+from .services import *
+from .clients import generate

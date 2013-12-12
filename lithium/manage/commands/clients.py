@@ -5,7 +5,7 @@ from argh.decorators import arg
 from colorama import Fore
 
 #@arg('name', help='file to load', default="aa")
-def client():
+def generate():
   "generate a client_id and a client_key"
 
   client_id = "%s" % uuid.uuid4()
