@@ -3,10 +3,10 @@ import uuid
 
 from argh.decorators import arg
 from colorama import Fore
+import yaml
 
-#@arg('name', help='file to load', default="aa")
 def generate():
-  "generate a client_id and a client_key"
+  "Generate a client_id and a client_key"
 
   client_id = "%s" % uuid.uuid4()
   client_key = os.urandom(16).encode("base64")[:21]
