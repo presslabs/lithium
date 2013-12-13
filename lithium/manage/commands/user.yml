@@ -1,0 +1,12 @@
+- vtemian:
+    email: vladtemian@gmail.com
+    password: my_awesome_password
+    permissions:
+      - permission: set
+      - permission: get
+      - quota: get
+      - quota: set
+      - site: create
+      - site: retrieve
+      - site: delete
+      - site: update
