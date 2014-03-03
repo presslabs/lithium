@@ -15,11 +15,8 @@ class TestCommand(Command):
   )
 
   def run(self, notify):
-    cover = ""
+    basic_nose_argv = ["tests=tests", "--with-coverage"]
     for package in self.packages:
-      cover += "--cover-package=%s " % package
-
-    basic_nose_argv = ["tests=tests", "--with-coverage",
-                       cover]
+      basic_nose_argv .append("--cover-package=%s" % package)
 
     nose.main(argv=basic_nose_argv)
