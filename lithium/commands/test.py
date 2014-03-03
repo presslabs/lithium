@@ -6,9 +6,9 @@ from flask.ext.script import Command, Option
 class TestCommand(Command):
   "Using nosetests, test them all!!!"
 
-  def __init__(self, package, *args, **kwargs):
+  def __init__(self, packages, *args, **kwargs):
     super(TestCommand, self).__init__(*args, **kwargs)
-    self.packages = package
+    self.packages = packages
 
   option_list = (
       Option('--with-notify', '-wn', dest='notify'),
